@@ -72,7 +72,7 @@ userSchema.pre('save', function(next) {
 });
 
 // // //auto increment
-userSchema.plugin(AutoIncrement, {inc_field: 'customer_id'});
+userSchema.plugin(AutoIncrement, {inc_field: 'customer_id',  disable_hooks: true});
 
 
 module.exports = model('User', userSchema);
